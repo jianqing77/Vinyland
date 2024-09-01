@@ -2,28 +2,27 @@ package com.vinyland.server.entity;
 
 
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Set;
 
 @Entity
-@Table(name="vinyl_category")
+@Table(name="genre")
 // @Data // set getters and setters
 @Getter
 @Setter
 
-public class VinylCategory {
+public class Genre {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
   private Long id;
 
-  @Column(name = "category_name")
-  private String categoryName;
+  @Column(name = "genre_name")
+  private String genreName;
 
-  @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
-  private Set<Vinyl> products;
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "genreCategory")
+  private Set<Vinyl> vinyls;
 
 }

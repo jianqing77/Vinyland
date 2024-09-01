@@ -19,14 +19,17 @@ public class Vinyl {
   private Long id;
 
   @ManyToOne
-  @JoinColumn(name = "category_id", nullable = false)
-  private VinylCategory category;
+  @JoinColumn(name = "genre_id", nullable = false)
+  private Genre genreCategory;
 
   @Column(name = "sku")
   private String sku;
 
   @Column(name = "name")
   private String name;
+
+  @Column(name = "singer")
+  private String singer;
 
   @Column(name = "description")
   private String description;
