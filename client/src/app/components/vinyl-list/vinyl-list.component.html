@@ -1,1 +1,3 @@
-<p>vinyl-list works!</p>
+<p *ngFor="let tempVinyl of vinyls">
+  {{ tempVinyl.name }}: {{ tempVinyl.unitPrice | currency : "USD" }}
+</p>

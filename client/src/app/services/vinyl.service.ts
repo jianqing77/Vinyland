@@ -14,7 +14,7 @@ export class VinylService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getVinylList(theCategoryId: number): Observable<Vinyl[]> {
+  getVinylList(): Observable<Vinyl[]> {
     return this.httpClient
       .get<GetResponse>(this.baseUrl)
       .pipe(map((response) => response._embedded.vinyls));
