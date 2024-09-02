@@ -1,1 +1,21 @@
-<p>side-bar works!</p>
+<aside class="menu-sidebar d-none d-lg-block">
+  <div class="logo">
+    <a routerLink="/vinyls">
+      <img src="/logo.png" alt="logo" class="logo-img" />
+    </a>
+  </div>
+  <div class="menu-sidebar-content js-scrollbar1">
+    <nav class="navbar-sidebar">
+      <ul class="list-unstyled navbar-list">
+        <li *ngFor="let tempGenre of vinylGenres">
+          <a
+            routerLink="/genre/{{ tempGenre.id }}"
+            routerLinkActive="active-link"
+          >
+            {{ tempGenre.genreName }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>

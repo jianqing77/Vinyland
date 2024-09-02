@@ -1,4 +1,31 @@
-<div>
-  <h1>Vinyls</h1>
-  <app-vinyl-list></app-vinyl-list>
+<div class="container-fluid">
+  <!-- HEADER-->
+  <div class="page-container">
+    <header class="header-desktop">
+      <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          <app-header></app-header>
+          <div class="account-wrap"></div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <!-- Main Content Area: Sidebar and Vinyl List -->
+  <div class="row flex-grow-1">
+    <!-- Sidebar -->
+    <div class="col-md-3 col-12">
+      <app-side-bar></app-side-bar>
+    </div>
+    <!-- Vinyl List -->
+    <div class="col-md-9 col-12">
+      <app-vinyl-list></app-vinyl-list>
+    </div>
+  </div>
+
+  <!-- Footer Component -->
+  <div class="row">
+    <div class="col-12">
+      <app-footer></app-footer>
+    </div>
+  </div>
 </div>

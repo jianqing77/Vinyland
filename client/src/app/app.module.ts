@@ -18,10 +18,38 @@ import { CartStatusComponent } from './components/cart-status/cart-status.compon
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { VinylDetailComponent } from './components/vinyl-detail/vinyl-detail.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component'; // For ngModel
 
 @NgModule({
-  declarations: [AppComponent, VinylListComponent, SideBarComponent, SearchBarComponent, LoginStatusComponent, LoginComponent, CartStatusComponent, CartDetailsComponent, VinylDetailComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    VinylListComponent,
+    SideBarComponent,
+    SearchBarComponent,
+    LoginStatusComponent,
+    LoginComponent,
+    CartStatusComponent,
+    CartDetailsComponent,
+    VinylDetailComponent,
+    FooterComponent,
+    HeaderComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatSidenavModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
+    FormsModule,
+  ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
